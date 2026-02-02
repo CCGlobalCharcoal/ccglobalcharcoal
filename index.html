@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Global Charcoal - Premium Nigerian Hardwood Charcoal Exporter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #02DA02;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #02DA02;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/><g fill-opacity="0.1"><polygon fill="%23fff" points="1200,0 1200,800 400,800"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #02DA02;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #02DA02;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(2, 218, 2, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #01B501;
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 4px solid #02DA02;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card h3 {
+            color: #02DA02;
+            margin-bottom: 1rem;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .specs {
+            background: #333;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .spec-card {
+            background: rgba(2, 218, 2, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #02DA02;
+        }
+        
+        .spec-card h4 {
+            color: #02DA02;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(2, 218, 2, 0.3);
+        }
+        
+        .contact-card h3 {
+            color: #02DA02;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .highlight {
+            color: #02DA02;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CC GLOBAL CHARCOAL</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#specifications">Specs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Nigerian Hardwood Charcoal</h1>
+            <p>Direct export from source to your market. Container load quantities with reliable supply chain management from our US-based export team.</p>
+            <a href="#contact" class="cta-button">Request Quote</a>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <h3>Hardwood Lump Charcoal</h3>
+                <p><strong>Spark Variety</strong></p>
+                <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                    <li>100% natural Nigerian hardwood</li>
+                    <li>High heat output & long burning</li>
+                    <li>Low ash content (<4%)</li>
+                    <li>95%+ carbon content</li>
+                    <li>Perfect for grilling & BBQ</li>
+                </ul>
+                <p><strong>Container Loads:</strong> 20ft & 40ft available</p>
+                <p><strong>Pricing:</strong> <span class="highlight">$600/ton FOB</span></p>
+            </div>
+            
+            <div class="product-card">
+                <h3>Hardwood Lump Charcoal</h3>
+                <p><strong>Non-Spark Variety</strong></p>
+                <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                    <li>Premium smokeless option</li>
+                    <li>Consistent high heat</li>
+                    <li>Restaurant grade quality</li>
+                    <li>Minimal popping & sparking</li>
+                    <li>Ideal for professional kitchens</li>
+                </ul>
+                <p><strong>Container Loads:</strong> 20ft & 40ft available</p>
+                <p><strong>Pricing:</strong> <span class="highlight">$600/ton FOB</span></p>
+            </div>
+            
+            <div class="product-card">
+                <h3>Briquette Charcoal</h3>
+                <p><strong>Uniform & Efficient</strong></p>
+                <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                    <li>Consistent size and shape</li>
+                    <li>Extended burn time</li>
+                    <li>Predictable heat output</li>
+                    <li>Cost-effective option</li>
+                    <li>Industrial & commercial applications</li>
+                </ul>
+                <p><strong>Container Loads:</strong> 20ft & 40ft available</p>
+                <p><strong>Pricing:</strong> <span class="highlight">$600/ton FOB</span></p>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Why Choose CC Global Charcoal</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3>Global Reach</h3>
+                    <p>US-based company serving distributors worldwide with reliable FOB shipping from Nigeria</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">?</div>
+                    <h3>Quality Assured</h3>
+                    <p>Premium hardwood sourced from sustainable Nigerian forests with quality certificates</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3>Container Loads</h3>
+                    <p>Bulk supply in 20ft (12 tons) and 40ft (26 tons) container quantities</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3>Direct Export</h3>
+                    <p>Direct shipping from Apapa Port, Lagos with complete export documentation</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3>US Professional Service</h3>
+                    <p>American company standards with professional communication and reliability</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Direct source pricing at $600/ton FOB with transparent terms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs" id="specifications">
+        <h2>Technical Specifications</h2>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h4>Quality Standards</h4>
+                <ul>
+                    <li><strong>Carbon Content:</strong> Minimum 95%</li>
+                    <li><strong>Moisture Content:</strong> 2-4%</li>
+                    <li><strong>Ash Content:</strong> Maximum 4%</li>
+                    <li><strong>Fixed Carbon:</strong> Minimum 85%</li>
+                </ul>
+            </div>
+            
+            <div class="spec-card">
+                <h4>Physical Properties</h4>
+                <ul>
+                    <li><strong>Size Range:</strong> 20mm - 120mm</li>
+                    <li><strong>Burning Time:</strong> 5-7 hours</li>
+                    <li><strong>Calorific Value:</strong> 7000+ kcal/kg</li>
+                    <li><strong>Origin:</strong> Nigerian Hardwood</li>
+                </ul>
+            </div>
+            
+            <div class="spec-card">
+                <h4>Packaging Options</h4>
+                <ul>
+                    <li><strong>25kg bags:</strong> 480 bags/20ft container</li>
+                    <li><strong>50kg bags:</strong> 240 bags/20ft container</li>
+                    <li><strong>Material:</strong> Polypropylene (PP) bags</li>
+                    <li><strong>Custom packaging:</strong> Available on request</li>
+                </ul>
+            </div>
+            
+            <div class="spec-card">
+                <h4>Shipping Terms</h4>
+                <ul>
+                    <li><strong>Terms:</strong> FOB Apapa Port, Lagos</li>
+                    <li><strong>Lead Time:</strong> 3-4 weeks</li>
+                    <li><strong>Payment:</strong> 50% + 50% pre-shipment</li>
+                    <li><strong>Documentation:</strong> Complete export docs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Our Export Team</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>?? Email Communication</h3>
+                <p><strong>Sales & Inquiries</strong><br>
+                info@ccglobalcharcoal.online</p>
+                <p><strong>General Information</strong><br>
+                info@ccglobalcharcoal.online</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>?? Direct Communication</h3>
+                <p><strong>WhatsApp Business</strong><br>
+                +1 252-604-0099</p>
+                <p><strong>Phone (International)</strong><br>
+                +1 252-640-0099 or +1 910-304-2692</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>?? Company Information</h3>
+                <p><strong>CC Global Charcoal LLC</strong><br>
+                North Carolina, United States</p>
+                <p><strong>Export Managers</strong><br>
+                Charles Olua & Cheri Staton</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>?? Shipping Details</h3>
+                <p><strong>Port of Loading</strong><br>
+                Apapa Port, Lagos, Nigeria</p>
+                <p><strong>Available Terms</strong><br>
+                FOB (standard) or CIF (upon request)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CC Global Charcoal LLC. All rights reserved. | Premium Nigerian Hardwood Charcoal Export</p>
+        <p>Licensed Export Company | Direct Source | Professional Service</p>
+    </footer>
+</body>
+</html>
