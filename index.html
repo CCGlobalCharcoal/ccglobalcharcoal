@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CC Global Charcoal - Premium Nigerian Hardwood Charcoal & Shisha Exporter</title>
+    
+    <!-- CHANGE 1: Adding the fonts you requested -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <style> 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+ 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Lato', sans-serif;
             line-height: 1.6;
             color: #333;
         }
-        
+ 
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+ 
         header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background-color: black;
             color: white;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+ 
         nav {
             max-width: 1200px;
             margin: 0 auto;
@@ -36,192 +46,170 @@
             align-items: center;
             padding: 0 2rem;
         }
-        
+ 
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
             color: #02DA02;
         }
-        
+ 
         .nav-links {
             display: flex;
-            gap: 2rem;
             list-style: none;
+            gap: 2rem;
         }
-        
+ 
         .nav-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+ 
         .nav-links a:hover {
             color: #02DA02;
         }
-        
+ 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/><g fill-opacity="0.1"><polygon fill="%23fff" points="1200,0 1200,800 400,800"/></g></svg>');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
             color: white;
-            margin-top: 70px;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
         }
-        
-        .hero-content h1 {
+ 
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+ 
+        .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #02DA02;
         }
-        
-        .hero-content p {
+ 
+        .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            max-width: 600px;
         }
-        
+ 
         .cta-button {
             display: inline-block;
-            background: #02DA02;
+            background-color: #02DA02;
             color: white;
-            padding: 15px 30px;
+            padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 10px 20px rgba(2, 218, 2, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
         }
-        
+ 
         .cta-button:hover {
-            background: #01B501;
+            background-color: #01b001;
             transform: translateY(-2px);
         }
-        
+ 
+        /* CHANGE 3: Price Stability Commitment section */
+        .price-commitment {
+            background: linear-gradient(135deg, #02DA02 0%, #01b001 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+ 
+        .price-commitment h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+ 
+        .price-commitment p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+ 
         section {
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+ 
         h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
-            color: #333;
         }
-        
+ 
+        .products {
+            background-color: #f4f4f4;
+        }
+ 
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
-        
+ 
         .product-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             border-top: 4px solid #02DA02;
         }
-        
+ 
         .product-card:hover {
             transform: translateY(-5px);
         }
-        
+ 
         .product-card h3 {
             color: #02DA02;
             margin-bottom: 1rem;
         }
-        
-        .features {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 3rem;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
+ 
+        .product-card p {
             margin-bottom: 1rem;
         }
-        
-        .specs {
-            background: #333;
-            color: white;
-            border-radius: 10px;
+ 
+        .highlight {
+            color: #02DA02;
+            font-weight: bold;
         }
-        
-        .specs-grid {
+ 
+        .why-us {
+            background: white;
+        }
+ 
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        
-        .spec-card {
-            background: rgba(2, 218, 2, 0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #02DA02;
-        }
-        
-        .spec-card h4 {
-            color: #02DA02;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-        
-        .contact-card {
-            background: rgba(255,255,255,0.05);
+ 
+        .feature-card {
+            text-align: center;
             padding: 2rem;
+            background: #f4f4f4;
             border-radius: 10px;
-            border: 1px solid rgba(2, 218, 2, 0.3);
+            transition: transform 0.3s;
         }
-        
-        .contact-card h3 {
+ 
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+ 
+        .feature-card h3 {
             color: #02DA02;
             margin-bottom: 1rem;
         }
-        
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 2rem;
+ 
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
-        
-        .highlight {
-            color: #02DA02;
-            font-weight: bold;
-        }
-        
+ 
         .video-showcase {
             background: #f8f9fa;
             border-radius: 10px;
@@ -276,18 +264,139 @@
             color: #666;
             font-style: italic;
         }
+ 
+        .specs {
+            background: #f4f4f4;
+        }
+ 
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+ 
+        .spec-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #02DA02;
+        }
+ 
+        .spec-card h3 {
+            color: #02DA02;
+            margin-bottom: 1rem;
+        }
+ 
+        .spec-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+ 
+        .spec-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+ 
+        .spec-card li:last-child {
+            border-bottom: none;
+        }
+ 
+        .spec-card li strong {
+            color: #02DA02;
+            font-weight: bold;
+        }
+ 
+        .contact {
+            background: black;
+            color: white;
+        }
+ 
+        .contact h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+ 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+ 
+        .contact-box {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #02DA02;
+        }
+ 
+        .contact-box h3 {
+            color: #02DA02;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+ 
+        .contact-box p {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+ 
+        .contact-box strong {
+            color: #02DA02;
+            display: block;
+            margin-top: 1rem;
+        }
+ 
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+        }
+ 
+        .contact-box a:hover {
+            color: #02DA02;
+        }
+ 
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+ 
+        .whatsapp-button:hover {
+            background-color: #20ba5a;
+            transform: scale(1.05);
+        }
+ 
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+ 
+        footer p {
+            margin: 0.5rem 0;
+        }
         
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2rem;
             }
-            
+ 
             .nav-links {
                 display: none;
             }
-            
-            section {
-                padding: 3rem 1rem;
+ 
+            .products-grid, .features-grid, .specs-grid, .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -295,7 +404,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">CC GLOBAL CHARCOAL</div>
+            <div class="logo">CC Global Charcoal</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
@@ -305,7 +414,7 @@
             </ul>
         </nav>
     </header>
-
+ 
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Premium Nigerian Hardwood Charcoal & Shisha</h1>
@@ -313,38 +422,35 @@
             <a href="#contact" class="cta-button">Request Quote</a>
         </div>
     </section>
-
-    <section id="products">
-        <h2>Our Products</h2>
+ 
+    <!-- CHANGE 3: Price Stability Commitment -->
+    <section class="price-commitment">
+        <h2>🛡️ Price Stability Commitment</h2>
+        <p>
+            While global shipping costs have increased 300-400% due to war conflicts in the Red Sea and Strait of Hormuz, 
+            <strong>CC Global Charcoal is maintaining our FOB pricing at $600/ton</strong> to support our partners during these challenging times. 
+            We believe in long-term relationships over short-term gains. Your success is our success.
+        </p>
+    </section>
+ 
+    <section class="products" id="products">
+        <h2>Our Premium Products</h2>
         <div class="products-grid">
             <div class="product-card">
                 <h3>Hardwood Lump Charcoal</h3>
-                <p><strong>Spark Variety</strong></p>
+                <p><strong>Spark & Non-Spark Variety</strong></p>
                 <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                    <li>100% natural Nigerian hardwood</li>
+                    <li>Pure hardwood, no additives</li>
                     <li>High heat output & long burning</li>
-                    <li>Low ash content (<4%)</li>
-                    <li>95%+ carbon content</li>
-                    <li>Perfect for grilling & BBQ</li>
+                    <li>Low ash production</li>
+                    <li>Minimal popping & sparking for non-spark</li>
+                    <li>Ideal for professional kitchens (non-spark)</li>
+                    <li>Restaurant & BBQ grade</li>
                 </ul>
                 <p><strong>Container Loads:</strong> 20ft & 40ft available</p>
                 <p><strong>Pricing:</strong> <span class="highlight">$600/ton FOB</span></p>
             </div>
-            
-            <div class="product-card">
-                <h3>Hardwood Lump Charcoal</h3>
-                <p><strong>Non-Spark Variety</strong></p>
-                <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                    <li>Premium smokeless option</li>
-                    <li>Consistent high heat</li>
-                    <li>Restaurant grade quality</li>
-                    <li>Minimal popping & sparking</li>
-                    <li>Ideal for professional kitchens</li>
-                </ul>
-                <p><strong>Container Loads:</strong> 20ft & 40ft available</p>
-                <p><strong>Pricing:</strong> <span class="highlight">$600/ton FOB</span></p>
-            </div>
-            
+ 
             <div class="product-card">
                 <h3>Hardwood Shisha Charcoal</h3>
                 <p><strong>Premium Shisha Grade</strong></p>
@@ -359,49 +465,49 @@
                 <p><strong>Pricing:</strong> <span class="highlight">$600/ton FOB</span></p>
             </div>
         </div>
-
-        <div class="features">
-            <h2>Why Choose CC Global Charcoal</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">&#127760;</div>
-                    <h3>Global Reach</h3>
-                    <p>US-based company serving distributors worldwide with reliable FOB shipping from Nigeria</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">&#10004;</div>
-                    <h3>Quality Assured</h3>
-                    <p>Premium hardwood sourced from sustainable Nigerian forests with quality certificates</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">&#128230;</div>
-                    <h3>Container Loads</h3>
-                    <p>Bulk supply in 20ft (12 tons) and 40ft (26 tons) container quantities</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">&#128674;</div>
-                    <h3>Direct Export</h3>
-                    <p>Direct shipping from Apapa Port, Lagos with complete export documentation</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">&#128188;</div>
-                    <h3>US Professional Service</h3>
-                    <p>American company standards with professional communication and reliability</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">&#128176;</div>
-                    <h3>Competitive Pricing</h3>
-                    <p>Direct source pricing at $600/ton FOB with transparent terms</p>
-                </div>
+    </section>
+ 
+    <section class="why-us">
+        <h2>Why Choose CC Global Charcoal</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Reach</h3>
+                <p>US based company with direct export capabilities to international markets.</p>
+            </div>
+ 
+            <div class="feature-card">
+                <div class="feature-icon">🚢</div>
+                <h3>Direct Export</h3>
+                <p>Direct shipping from Apapa Port, Lagos with complete export documentation.</p>
+            </div>
+ 
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Quality Assured</h3>
+                <p>Premium hardwood sourced from sustainable Nigerian forests with quality certificates.</p>
+            </div>
+ 
+            <div class="feature-card">
+                <div class="feature-icon">🇺🇸</div>
+                <h3>US Professional Service</h3>
+                <p>American company standards with professional communication and reliability.</p>
+            </div>
+ 
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Container Loads</h3>
+                <p>Bulk supply in 20ft (12 tons) and 40ft (26 tons) container quantities.</p>
+            </div>
+ 
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Competitive Pricing</h3>
+                <p>Direct source pricing at $600/ton FOB with transparent terms.</p>
             </div>
         </div>
     </section>
-
+ 
     <section class="video-showcase" id="videos">
         <h2>Product Quality Videos</h2>
         <p style="text-align: center; margin-bottom: 2rem; color: #666;">See our premium Nigerian hardwood charcoal and shisha quality in action</p>
@@ -443,92 +549,99 @@
             Quality you can see - Premium Nigerian hardwood charcoal and shisha for international export
         </p>
     </section>
-
+ 
     <section class="specs" id="specifications">
         <h2>Technical Specifications</h2>
         <div class="specs-grid">
             <div class="spec-card">
-                <h4>Quality Standards</h4>
+                <h3>&#128293; Quality Standards</h3>
                 <ul>
-                    <li><strong>Carbon Content:</strong> Minimum 95%</li>
+                    <li><strong>Type:</strong> Hardwood Lump</li>
+                    <li><strong>Carbon Content:</strong> 75-85%</li>
+                    <li><strong>Ash Content:</strong> <5%</li>
                     <li><strong>Moisture Content:</strong> 2-4%</li>
-                    <li><strong>Ash Content:</strong> Maximum 4%</li>
-                    <li><strong>Fixed Carbon:</strong> Minimum 85%</li>
+                    <li><strong>Burn Time:</strong> 3-4 hours</li>
+                    <li><strong>Volatile Matter:</strong> 15-25%</li>
                 </ul>
             </div>
-            
+ 
             <div class="spec-card">
-                <h4>Physical Properties</h4>
+                <h3>&#128207; Physical Properties</h3>
                 <ul>
-                    <li><strong>Size Range:</strong> 20mm - 120mm</li>
-                    <li><strong>Burning Time:</strong> 5-7 hours</li>
-                    <li><strong>Calorific Value:</strong> 7000+ kcal/kg</li>
-                    <li><strong>Origin:</strong> Nigerian Hardwood</li>
+                    <li><strong>Size Range:</strong> 5-15cm</li>
+                    <li><strong>Fixed Carbon:</strong> >70%</li>
+                    <li><strong>Calorific Value:</strong> 7000-8000 kcal/kg</li>
+                    <li><strong>Density:</strong> High-grade hardwood</li>
+                    <li><strong>Color:</strong> Deep black</li>
+                    <li><strong>Form:</strong> Natural lump</li>
                 </ul>
             </div>
-            
+ 
             <div class="spec-card">
-                <h4>Packaging Options</h4>
+                <h3>&#128230; Packaging & Pricing</h3>
                 <ul>
-                    <li><strong>25kg bags:</strong> 480 bags/20ft container</li>
-                    <li><strong>50kg bags:</strong> 240 bags/20ft container</li>
-                    <li><strong>Material:</strong> Polypropylene (PP) bags</li>
-                    <li><strong>Custom packaging:</strong> Available on request</li>
+                    <li><strong>Packaging:</strong> Polypropylene bags</li>
+                    <li><strong>10kg bags:</strong> $7</li>
+                    <li><strong>25kg bags:</strong> $15</li>
+                    <li><strong>50kg bags:</strong> $30</li>
+                    <li><strong>20ft Container:</strong> ~12 tons</li>
+                    <li><strong>40ft Container:</strong> ~26 tons</li>
                 </ul>
             </div>
-            
+ 
             <div class="spec-card">
-                <h4>Shipping Terms</h4>
+                <h3>&#128674; Shipping Details</h3>
                 <ul>
-                    <li><strong>Terms:</strong> FOB Apapa Port, Lagos</li>
-                    <li><strong>Lead Time:</strong> 3-4 weeks</li>
-                    <li><strong>Payment:</strong> 50% + 50% pre-shipment</li>
-                    <li><strong>Documentation:</strong> Complete export docs</li>
+                    <li><strong>Terms:</strong> FOB Apapa Port</li>
+                    <li><strong>Price:</strong> $600/ton</li>
+                    <li><strong>Lead Time:</strong> 2-3 weeks</li>
+                    <li><strong>Payment:</strong> Negotiable terms</li>
+                    <li><strong>Origin:</strong> Nigeria</li>
+                    <li><strong>Quality:</strong> Pre-shipment inspection available</li>
                 </ul>
             </div>
         </div>
     </section>
-
+ 
     <section class="contact" id="contact">
         <h2>Contact Our Export Team</h2>
+        
         <div class="contact-grid">
-            <div class="contact-card">
-                <h3>&#128231; Email Communication</h3>
+            <div class="contact-box">
+                <h3>📧 Email Communication</h3>
                 <p><strong>Sales & Inquiries</strong><br>
-                info@ccglobalcharcoal.online</p>
+                <a href="mailto:sales@ccglobalcharcoal.online">sales@ccglobalcharcoal.online</a></p>
                 <p><strong>General Information</strong><br>
-                info@ccglobalcharcoal.online</p>
+                <a href="mailto:sales@ccglobalcharcoal.online">sales@ccglobalcharcoal.online</a></p>
             </div>
-            
-            <div class="contact-card">
-                <h3>&#128241; Direct Communication</h3>
+ 
+            <div class="contact-box">
+                <h3>📱 Direct Communication</h3>
                 <p><strong>WhatsApp Business</strong><br>
-                +1 252-604-0099</p>
+                <a href="https://wa.me/12526400099">+1 252-640-0099</a></p>
                 <p><strong>Phone (International)</strong><br>
-                +1 252-640-0099 or +1 910-304-2692</p>
+                <a href="tel:+12526400099">+1 252-640-0099</a> or<br>
+                <a href="tel:+19103042692">+1 910-304-2692</a></p>
             </div>
-            
-            <div class="contact-card">
-                <h3>&#127970; Company Information</h3>
+ 
+            <div class="contact-box">
+                <h3>🏢 Company Information</h3>
                 <p><strong>CC Global Charcoal LLC</strong><br>
                 North Carolina, United States</p>
                 <p><strong>Export Managers</strong><br>
                 Charles Olua & Cheri Staton</p>
             </div>
-            
-            <div class="contact-card">
-                <h3>&#128674; Shipping Details</h3>
+ 
+            <div class="contact-box">
+                <h3>🚢 Shipping Details</h3>
                 <p><strong>Port of Loading</strong><br>
                 Apapa Port, Lagos, Nigeria</p>
                 <p><strong>Available Terms</strong><br>
                 FOB (standard) or CIF (upon request)</p>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 CC Global Charcoal LLC. All rights reserved. | Premium Nigerian Hardwood Charcoal & Shisha Export</p>
-        <p>Licensed Export Company | Direct Source | Professional Service</p>
-    </footer>
-</body>
-</html>
+ 
+        <div style="text-align: center;">
+            <a href="https://wa.me/12526400099?text=Hello%2C%20I'm%20interested%20in%20your%20premium%20charcoal%20products" 
+               class="whatsapp-button" target="_blank">
+                &#128172; Chat 
